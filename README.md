@@ -3,7 +3,7 @@
 
 O sistema será dividido em etapas: primeiro, irei desenvolvê-lo “na unha” (em Java) para treinar a parte lógica. Em seguida, o código será refatorado, visando melhor desempenho e um código limpo. Quando tudo estiver funcional e refatorado, implementarei o sistema utilizando frameworks (Spring Boot, MySQL, etc.).
 
-Estou gravando um conteudo sobre esse projeto, você pode acompanhar em: 
+Estou gravando um conteúdo sobre esse projeto, você pode acompanhar em: 
 https://www.youtube.com/@xpedrinn
 www.linkedin.com/in/pedrooliver-fnx
 
