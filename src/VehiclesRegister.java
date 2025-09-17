@@ -1,12 +1,11 @@
 import java.util.Scanner;
 
-public class VehiclesRegister {
+public class VehiclesRegister extends VacancyManager {
     Scanner sc = new Scanner(System.in);
     private String modelo, marca, ano, placa, cor;
 
-
     //forçando construtor
-    public VehiclesRegister() {
+    public  VehiclesRegister() {
         System.out.println("Digite o modelo: ");
         this.modelo = sc.nextLine();
         System.out.println("Digite a marca: ");
@@ -17,8 +16,10 @@ public class VehiclesRegister {
         this.placa = sc.nextLine();
         System.out.println("Digite a cor: ");
         this.cor = sc.nextLine();
-
     }
+
+
+
 
     //get e set para configurar e armazenar dados
     public String getModelo() {
