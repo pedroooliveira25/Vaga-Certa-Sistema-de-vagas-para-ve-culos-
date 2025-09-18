@@ -5,10 +5,14 @@ public class InteracaoUsuario {
     private String menu;
 
     public InteracaoUsuario(){
+        super();
     }
 
-    public InteracaoUsuario(String menu) {
+    public void setMenu() {
         this.menu = menu;
+    }
+
+    public void mensagens(){
         menu =  "Olá seja bem vindo escolha uma opção! \n" +
                 "01- Cadastrar carro\n" +
                 "02- Consultar valores \n" +
@@ -22,34 +26,13 @@ public class InteracaoUsuario {
         int opcao = sc.nextInt();
         boolean continuar = true;
 
-    while (continuar){
-
         switch (opcao){
             case 1 :
-
-                System.out.println("Digite o modelo: ");
-                sc.nextLine();
-                String modelo = sc.nextLine();
-                System.out.println("Digite a marca: ");
-                String marca = sc.nextLine();
-                System.out.println("Digite o ano: ");
-                String ano = sc.nextLine();
-                System.out.println("Digite a placa: ");
-                String placa = sc.nextLine();
-                System.out.println("Digite a cor: ");
-                String cor = sc.nextLine();
-
-                VehiclesRegister rgv = new VehiclesRegister();
-
-                rgv.setModelo(modelo);
-                rgv.setMarca(marca);
-                rgv.setAno(ano);
-                rgv.setPlaca(placa);
-                rgv.setCor(cor);
-
-                rgv.mostrarInformacoesCarro();
-                rgv.validacao();
-
+                VehiclesRegister info = new VehiclesRegister();
+                info.requisicaoInfo();
+                info.mostrarInformacoesCarro();
+                info.validacao();
+                info.mensagens();
                 break;
             case 2:
 
@@ -64,11 +47,7 @@ public class InteracaoUsuario {
                 continuar = false;
         }
       }
-    }
-
-
 }
-
 
 
 

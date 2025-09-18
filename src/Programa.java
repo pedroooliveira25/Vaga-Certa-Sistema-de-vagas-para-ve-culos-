@@ -5,9 +5,9 @@ public class Programa extends InteracaoUsuario {
 
     public Programa(){
     }
-    
+
     public Programa(String menu) {
-        super(menu);
+        super.mensagens();
         System.out.println(menu);
     }
 

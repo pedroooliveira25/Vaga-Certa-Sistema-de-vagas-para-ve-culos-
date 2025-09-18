@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class VehiclesRegister extends VacancyManager {
+public class VehiclesRegister extends InteracaoUsuario{
     private String modelo, marca, ano, placa, cor;
 
     public VehiclesRegister() {
@@ -56,6 +56,21 @@ public class VehiclesRegister extends VacancyManager {
         this.cor = cor;
     }
 
+
+    public void requisicaoInfo(){
+        System.out.println("Digite o modelo: ");
+        sc.nextLine();
+        this.modelo = sc.nextLine();
+        System.out.println("Digite a marca: ");
+        this.marca = sc.nextLine();
+        System.out.println("Digite o ano: ");
+        this.ano = sc.nextLine();
+        System.out.println("Digite a placa: ");
+        this.placa = sc.nextLine();
+        System.out.println("Digite a cor: ");
+        this.cor = sc.nextLine();
+    }
+
     //metado responsavel por imprimir informações
     public void mostrarInformacoesCarro() {
         System.out.println("Modelo: " + getModelo());
@@ -78,12 +93,18 @@ public class VehiclesRegister extends VacancyManager {
 
             } else {
                 System.out.println("Digite os dados cadastrais novamente!");
-                VehiclesRegister rgv = new VehiclesRegister();
+                requisicaoInfo();
 
             }
         }
-
     }
+
+    @Override
+    public void mensagens(){
+        super.mensagens();
+        System.out.println("05- Dados do veiculo");
+    }
+
 
 
 }
