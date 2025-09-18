@@ -1,18 +1,19 @@
+import javax.swing.*;
 import java.util.Scanner;
 
-public class Programa {
-    public static void main() {
-        Scanner sc = new Scanner(System.in);
-        InteracaoUsuario menu = new InteracaoUsuario();
-        menu.selecao(null);
+public class Programa extends InteracaoUsuario {
 
+    public Programa(){
+    }
+    
+    public Programa(String menu) {
+        super(menu);
+        System.out.println(menu);
+    }
 
-
-
-
+    public static void main(String[] args) {
+       Programa.selecao();
 
     }
 
 }
-
-

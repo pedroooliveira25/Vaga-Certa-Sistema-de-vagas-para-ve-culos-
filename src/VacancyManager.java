@@ -7,7 +7,6 @@ public class VacancyManager {
 
 
     public VacancyManager(){
-
     }
 
     public void menuManager(){
@@ -22,7 +21,7 @@ public class VacancyManager {
        }
        else {
            System.out.println("Insira os dados abaixo!");
-           VehiclesRegister rgv = new VehiclesRegister();
+           VehiclesRegister rgv =new VehiclesRegister();
        }
 
     }

@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
 public class InteracaoUsuario {
-    Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
     private String menu;
 
-
     public InteracaoUsuario(){
+    }
+
+    public InteracaoUsuario(String menu) {
         this.menu = menu;
         menu =  "Olá seja bem vindo escolha uma opção! \n" +
                 "01- Cadastrar carro\n" +
@@ -15,17 +17,39 @@ public class InteracaoUsuario {
         System.out.println(menu);
     }
 
-    public void selecao(Boolean continuar){
+
+    public static void selecao(){
         int opcao = sc.nextInt();
-        continuar = true;
+        boolean continuar = true;
 
     while (continuar){
 
         switch (opcao){
-            case 1:
+            case 1 :
+
+                System.out.println("Digite o modelo: ");
+                sc.nextLine();
+                String modelo = sc.nextLine();
+                System.out.println("Digite a marca: ");
+                String marca = sc.nextLine();
+                System.out.println("Digite o ano: ");
+                String ano = sc.nextLine();
+                System.out.println("Digite a placa: ");
+                String placa = sc.nextLine();
+                System.out.println("Digite a cor: ");
+                String cor = sc.nextLine();
+
                 VehiclesRegister rgv = new VehiclesRegister();
+
+                rgv.setModelo(modelo);
+                rgv.setMarca(marca);
+                rgv.setAno(ano);
+                rgv.setPlaca(placa);
+                rgv.setCor(cor);
+
                 rgv.mostrarInformacoesCarro();
                 rgv.validacao();
+
                 break;
             case 2:
 

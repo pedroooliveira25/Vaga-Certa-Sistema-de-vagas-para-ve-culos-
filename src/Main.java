@@ -3,8 +3,11 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Programa sistema = new Programa();
-        sistema.main();
+
+//      gabiarra
+        String menu = "";
+        Programa sistema = new Programa(menu);
+        sistema.main(null);
 
     }
 

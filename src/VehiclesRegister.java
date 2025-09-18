@@ -1,24 +1,18 @@
 import java.util.Scanner;
 
 public class VehiclesRegister extends VacancyManager {
-    Scanner sc = new Scanner(System.in);
     private String modelo, marca, ano, placa, cor;
 
-    //forçando construtor
-    public  VehiclesRegister() {
-        System.out.println("Digite o modelo: ");
-        this.modelo = sc.nextLine();
-        System.out.println("Digite a marca: ");
-        this.marca = sc.nextLine();
-        System.out.println("Digite o ano: ");
-        this.ano = sc.nextLine();
-        System.out.println("Digite a placa: ");
-        this.placa = sc.nextLine();
-        System.out.println("Digite a cor: ");
-        this.cor = sc.nextLine();
+    public VehiclesRegister() {
     }
 
-
+    public VehiclesRegister(String modelo, String marca, String ano, String placa, String cor) {
+        this.modelo = modelo;
+        this.marca = marca;
+        this.ano = ano;
+        this.placa = placa;
+        this.cor = cor;
+    }
 
 
     //get e set para configurar e armazenar dados
